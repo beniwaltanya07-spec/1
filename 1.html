@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="GlowUp Cosmetics - Premium lipsticks, soaps, shampoos and makeup products with a luxurious pink theme." />
+    <title>GlowUp Cosmetics | Beauty Redefined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">💄</span>
+                <span>GlowUp</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" id="search-btn" aria-label="Search"><span>🔍</span></button>
+                <button class="icon-btn" id="wishlist-btn" aria-label="Wishlist"><span>🤍</span><span class="badge"
+                        id="wishlist-count">0</span></button>
+                <button class="icon-btn" id="cart-btn" aria-label="Cart"><span>🛒</span><span class="badge"
+                        id="cart-count">0</span></button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="search-bar" id="search-bar">
+            <input type="text" id="search-input" placeholder="Search for lipstick, soap, shampoo..." />
+            <button id="search-close">✕</button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg-circles">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+            <div class="circle c3"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tag">✨ New Collection 2026</p>
+            <h1>Beauty That <span class="highlight">Glows</span> From Within</h1>
+            <p class="hero-sub">Discover our premium range of lipsticks, soaps, shampoos & makeup — crafted with love
+                for every skin tone.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#categories" class="btn btn-outline">Explore Categories</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Products</span></div>
+                <div class="stat"><span class="stat-num">50K+</span><span class="stat-label">Happy Clients</span></div>
+                <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Cruelty Free</span></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card floating">
+                <div class="hero-emoji-display">
+                    <span class="big-emoji">💄</span>
+                    <span class="big-emoji">🌸</span>
+                    <span class="big-emoji">✨</span>
+                    <span class="big-emoji">💋</span>
+                    <span class="big-emoji">🧴</span>
+                    <span class="big-emoji">🌺</span>
+                </div>
+                <div class="hero-label">Premium Beauty</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE STRIP ===== -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>💄 Lipstick Collection</span><span>🌸 Rose Soaps</span><span>🧴 Hair Care</span><span>💅 Nail
+                Polish</span><span>✨ Glitter Makeup</span><span>🎀 Special Offers</span><span>💋 Matte
+                Lips</span><span>🌺 Floral Shampoo</span><span>💄 Lipstick Collection</span><span>🌸 Rose
+                Soaps</span><span>🧴 Hair Care</span><span>💅 Nail Polish</span><span>✨ Glitter Makeup</span><span>🎀
+                Special Offers</span>
+        </div>
+    </div>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories" id="categories">
+        <div class="section-header">
+            <p class="section-tag">Browse By</p>
+            <h2>Our <span class="highlight">Categories</span></h2>
+            <p class="section-sub">Everything you need for a complete beauty routine</p>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card" onclick="filterProducts('lipstick')">
+                <div class="cat-icon-wrap" style="background: linear-gradient(135deg,#ff6b9d,#c44569)">
+                    <span class="cat-icon">💄</span>
+                </div>
+                <h3>Lipsticks</h3>
+                <p>Matte, Glossy & Nude shades</p>
+                <span class="cat-count">24 Products</span>
+            </div>
+            <div class="category-card" onclick="filterProducts('soap')">
+                <div class="cat-icon-wrap" style="background: linear-gradient(135deg,#ffecd2,#fcb69f)">
+                    <span class="cat-icon">🧼</span>
+                </div>
+                <h3>Soaps</h3>
+                <p>Rose, Lavender & Milk varieties</p>
+                <span class="cat-count">18 Products</span>
+            </div>
+            <div class="category-card" onclick="filterProducts('shampoo')">
+                <div class="cat-icon-wrap" style="background: linear-gradient(135deg,#a18cd1,#fbc2eb)">
+                    <span class="cat-icon">🧴</span>
+                </div>
+                <h3>Shampoos</h3>
+                <p>Keratin, Herbal & Anti-hair fall</p>
+                <span class="cat-count">15 Products</span>
+            </div>
+            <div class="category-card" onclick="filterProducts('makeup')">
+                <div class="cat-icon-wrap" style="background: linear-gradient(135deg,#f8b500,#ff6b9d)">
+                    <span class="cat-icon">💅</span>
+                </div>
+                <h3>Makeup</h3>
+                <p>Foundation, Blush & Eyeshadow</p>
+                <span class="cat-count">32 Products</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS SECTION ===== -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <p class="section-tag">Best Sellers</p>
+            <h2>Our <span class="highlight">Products</span></h2>
+            <p class="section-sub">Handpicked premium beauty essentials</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" id="btn-all" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" id="btn-lipstick" onclick="filterProducts('lipstick')">💄 Lipstick</button>
+            <button class="filter-btn" id="btn-soap" onclick="filterProducts('soap')">🧼 Soap</button>
+            <button class="filter-btn" id="btn-shampoo" onclick="filterProducts('shampoo')">🧴 Shampoo</button>
+            <button class="filter-btn" id="btn-makeup" onclick="filterProducts('makeup')">💅 Makeup</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <!-- ===== OFFERS BANNER ===== -->
+    <section class="offers" id="offers">
+        <div class="offer-card">
+            <div class="offer-text">
+                <p class="offer-tag">Limited Time</p>
+                <h2>Buy 2 Get 1 <span>FREE</span></h2>
+                <p>On all lipstick collections this month. Use code <strong>GLOWUP30</strong> at checkout.</p>
+                <a href="#products" class="btn btn-white">Grab the Deal</a>
+            </div>
+            <div class="offer-visual">
+                <div class="offer-emoji">🎀</div>
+                <div class="offer-circles">
+                    <div class="oc oc1">💄</div>
+                    <div class="oc oc2">💋</div>
+                    <div class="oc oc3">✨</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section class="why-us">
+        <div class="section-header">
+            <p class="section-tag">Why Choose Us</p>
+            <h2>The <span class="highlight">GlowUp</span> Promise</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feat-icon">🌿</div>
+                <h3>100% Natural</h3>
+                <p>All products made with natural, skin-friendly ingredients that nourish and protect.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feat-icon">🐰</div>
+                <h3>Cruelty Free</h3>
+                <p>We never test on animals. Our products are certified cruelty-free and vegan.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feat-icon">🚚</div>
+                <h3>Free Shipping</h3>
+                <p>Free delivery on orders above ₹500. Fast and secure packaging guaranteed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feat-icon">💯</div>
+                <h3>Certified Quality</h3>
+                <p>Dermatologist tested and approved for all skin types including sensitive skin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials">
+        <div class="section-header">
+            <p class="section-tag">Customer Love</p>
+            <h2>What They <span class="highlight">Say</span></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testi-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The Rose Petal Lipstick is absolutely gorgeous! Long lasting and super hydrating. I got so many
+                    compliments!"</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">P</div>
+                    <div>
+                        <strong>Priya Sharma</strong>
+                        <small>Mumbai</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card featured">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"GlowUp shampoo transformed my dry hair in just 2 weeks! The floral fragrance is divine. Highly
+                    recommend!"</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">A</div>
+                    <div>
+                        <strong>Ananya Patel</strong>
+                        <small>Delhi</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The Rose Milk soap leaves my skin so soft! It smells amazing and lasts for weeks. Will definitely
+                    buy again!"</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">S</div>
+                    <div>
+                        <strong>Sakshi Verma</strong>
+                        <small>Pune</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+        <div class="newsletter-inner">
+            <span class="nl-icon">💌</span>
+            <h2>Stay in the <span class="highlight">Pink</span></h2>
+            <p>Subscribe for exclusive deals, beauty tips, and new arrivals!</p>
+            <form class="nl-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" id="nl-email" placeholder="Enter your email address..." required />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p class="nl-note" id="nl-msg"></p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <p class="section-tag">Get In Touch</p>
+            <h2>Contact <span class="highlight">Us</span></h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-item"><span class="info-icon">📍</span>
+                    <div><strong>Address</strong>
+                        <p>12 Beauty Lane, Rose Garden Mall, Mumbai 400001</p>
+                    </div>
+                </div>
+                <div class="info-item"><span class="info-icon">📞</span>
+                    <div><strong>Phone</strong>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+                <div class="info-item"><span class="info-icon">✉️</span>
+                    <div><strong>Email</strong>
+                        <p>hello@glowupcosmetics.com</p>
+                    </div>
+                </div>
+                <div class="info-item"><span class="info-icon">🕐</span>
+                    <div><strong>Hours</strong>
+                        <p>Mon–Sat: 9am – 7pm</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <input type="text" placeholder="Subject" />
+                <textarea placeholder="Your Message..." rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message 💌</button>
+                <p class="form-msg" id="form-msg"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo"><span class="logo-icon">💄</span><span>GlowUp</span></a>
+                <p>Beauty Redefined. Your trusted destination for premium cosmetics and skincare products.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📸</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">▶️</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#products">Lipsticks</a></li>
+                    <li><a href="#products">Soaps</a></li>
+                    <li><a href="#products">Shampoos</a></li>
+                    <li><a href="#products">Makeup</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 GlowUp Cosmetics. All rights reserved. Made with 💗</p>
+        </div>
+    </footer>
+
+    <!-- ===== CART SIDEBAR ===== -->
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Cart</h3>
+            <button onclick="closeCart()" class="close-btn">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty" id="cart-empty">
+                <span>🛍️</span>
+                <p>Your cart is empty</p>
+                <a href="#products" onclick="closeCart()" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display:none">
+            <div class="cart-total"><span>Total:</span><span id="cart-total">₹0</span></div>
+            <button class="btn btn-primary w-full" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <!-- ===== CHATBASE CHATBOT ===== -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "A7117iPmcsHVvSLAwRhXV",
+            domain: "www.chatbase.co"
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="A7117iPmcsHVvSLAwRhXV" domain="www.chatbase.co" defer>
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
